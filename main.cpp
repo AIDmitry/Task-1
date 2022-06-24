@@ -3,8 +3,12 @@
 using namespace std;
 
 int main() {
-    int a=6;
-    storage<typeof(a)> & obj = storage<typeof(a)>::Get();
-    obj.addTo(a);
+    storage<typeof(int)> & obj = storage<typeof(int)>::Instance();
+    obj.addTo(8);
+    obj.addTo(5);
+    obj.addTo(4);
+    obj.Show();
+    obj.deleteFrom(4);
+    obj.Show();
     return 0;
 }
